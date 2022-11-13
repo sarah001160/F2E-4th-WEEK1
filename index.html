@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="2022 THE F2E 4th "/>
+    <title>The F2E 活動網站設計</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <script src="./js/all.js" defer></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script> <!--jQuery--->
+    <script src="./js/alljq.js"></script>
+  
+</head>
+<body>
+    <div id="app">
+        <header>
+            <img class="headerImg" src="./img/UFO.png" alt="UFO">
+            <div>
+                <span class="fontL light shiningText">THE F2E 4th</span>
+                <br>
+                <span class="fontL light testPos shiningText">互動式網頁設計</span>
+            </div>
+            <div class="animateArea">
+                <img id="shadowHuman" data-shadowHuman class="shadowHuman" src="./img/person.png" alt="person">
+                <img id="flashLight" class="flashLight" src="./img/Polygon5.png" alt="">
+                <img  id="sparkOne" class="sparkOne" src="./img/spark1.png" alt="spark1.png">         
+            </div>
+        </header>
+      <div class="firstContent">
+            <div><img src="./img/Alien1.png" alt="Alien1"></div>
+            <div><p class="fontL jqAnimate">羨慕別人的酷酷網頁動畫?</p></div>
+       </div>
+       <div class="secondContent">
+            <div><img src="./img/Alien2.png" alt="Alien2.png"></div>   
+            <div><p class="fontL jqAnimate">滿足不了同事的許願?</p></div>
+        </div>
+        <div class="thirdContent">
+            <div><img class="jqAnimate" src="./img/Alien3.png" alt="Alien3.png"></div>
+        </div>
+        <div class="fourthContent">
+            <div><img src="./img/Alien3.png" alt="Alien3.png"></div>
+            <div><p class="fontL jqAnimate">動畫技能樹太雜無從下手?</p></div>
+        </div>
+    </div>
+    <div class="fifthContent">
+        <div><img src="./img/Alien3-1.png" alt="Alien3-1.png"></div>
+    </div>
+    <div class="sixthContent">
+        <div><img src="./img/spaceship 1.png" alt="spaceship 1.png"></div>
+    </div>
+    <div class="seventhContent">
+        <div><img src="./img/spaceship 1.png" alt="spaceship 1.png"></div>
+    </div>
+    <div class="eigthContent">
+        <div><img src="./img/spaceship 1.png" alt="spaceship 1.png"></div>
+        <div><span class="shiningText light ">請選擇想駕駛的座位</span></div>
+    </div>
+    
+    <div id="outerSpace" class="outerSpace">
+        小圖案的石頭 ,用positoin absolute固定住就好
+        <div style="height:500px;color:white;">
+           <h1> week1 板塊設計</h1>
+        </div>
+        <div style="height:500px;color:white;">
+            week2凱金田行動科技
+        </div>
+        <div style="height:500px;color:white;">
+        week3新加坡商鈦坦科技
+        </div>
+        
+    </div>
+   
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+</body>
+<script>
+    gsap.to("#shadowHuman",{
+        scrollTrigger:{
+            scrub:true,
+        },
+        x:1500,
+        scale:1,
+        duration:1,
+	})
+    gsap.to("#sparkOne",{
+        scrollTrigger:{
+            scrub:true,
+            start:"center 0px",
+            end:"+=1500px",
+        },
+        display:'none',
+    })
+
+    gsap.to("#flashLight",{
+        scrollTrigger:{
+            scrub:true,
+            start:"center center",//從這個高度開始觸發
+            end:"+=500px", //直至這個高度停止
+        },
+        scale:2,
+            
+	})
+
+  
+</script>
+</html>

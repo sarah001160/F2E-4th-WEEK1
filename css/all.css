@@ -1,0 +1,211 @@
+html,body,*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    box-sizing:border-box;
+    font-size:20px;
+    font-family:'微軟正黑體', 'Arial';
+}
+.headerImg{
+    max-width:90%;
+    box-sizing:border-box;
+    margin:0 auto;/*horizental center*/
+    display:flex;
+    justify-content:center;/*horizental center*/
+}
+.fontL{
+    font-size:70px;
+    
+}
+.light{
+    color:white;
+}
+.showBlock{
+    display:block;
+    z-index:100;
+}
+
+.jqAnimate{
+    transform:translateY(100%);
+    transition:all 2s;
+    opacity:0;
+}
+
+.fadeIn{
+    transform:translateY(0);
+    opacity:1;
+}
+.shiningText{
+    text-shadow:white 0 0 0 ,
+    0 0 10px,
+    0 0 50px,
+    0 0 50px;
+    letter-spacing:1.5rem;
+}
+
+
+
+
+
+
+
+#app{
+    width:100%;
+      
+}
+
+header{
+    width:100%;
+    height:4000px;
+    background-color:#52556D;
+    position:relative;
+}
+
+header div span{
+    display:block;
+    text-align:center;
+    margin:0 auto;
+   /* text-shadow:white 0 0 0 ,
+                       0 0 10px,
+                       0 0 50px,
+                       0 0 50px;
+    letter-spacing:1.5rem;*/
+}
+
+header>div{
+    padding-bottom:50px;
+}
+
+header .animateArea{
+    margin-top:50px;
+    display:flex;
+    flex-direction:row;
+    background:#52556D;
+    width:100%;
+    box-sizing:border-box;   
+}
+header .animateArea .shadowHuman{
+   margin-left:20%;
+   margin-top:50px;
+}
+header .animateArea .sparkOne{
+    display:flex;
+    margin:0 40% 0 22%;/*上下  左右*/
+}
+header .animateArea .flashLight{
+    position:absolute;
+    top:10%;
+    left:38%;
+    z-index:100;
+    display:none;
+}
+
+.firstContent{
+    width:100%;
+    padding:100px 0;/*上下 左右*/
+    margin-top:100vh;
+    margin-bottom:200vh;
+    display:flex;
+    flex-direction:row;
+
+}
+.firstContent div{
+  margin-left:10px;
+}
+.firstContent div img{
+   margin-top:200px; 
+}
+.firstContent div:nth-child(2){
+    margin-left:10%;
+}
+
+.secondContent{
+    display:flex;
+    flex-direction:row-reverse;/*從右到左*/
+    margin-top:100vh;
+    margin-bottom:200vh;
+}
+
+.thirdContent div{
+   display:flex;
+   justify-content:center;
+   margin-bottom:200vh;
+}
+.thirdContent div img{
+    width:25%;
+    height:25%;
+}
+
+.fourthContent{
+    display:flex;
+    flex-direction:column-reverse;
+    justify-items:center;
+    margin-bottom:200vh;
+}
+
+.fourthContent div{
+    margin:100px auto 0 auto;
+}
+
+.fifthContent{
+    display:flex;
+    flex-direction:row-reverse;
+    margin-bottom:200vh;
+}
+
+.sixthContent{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+.sixthContent div{
+    margin-bottom:100vh;
+}
+.sixthContent div img{
+    width:264px;
+    height:162px;
+}
+
+.seventhContent{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.seventhContent div img{
+   width:518px;
+   height:316px;
+}
+
+.eigthContent{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    position: relative;
+    margin-bottom:200vh;
+}
+.eigthContent div:nth-child(2){
+    position:absolute;
+    top:200px;
+    left:38%;
+    z-index:1000;
+}
+
+.eigthContent div:nth-child(2) span{
+    font-size:40px;
+    letter-spacing:0.5rem;
+}
+
+.outerSpace{
+    width:100%;
+    height:auto;
+    background-image:url('../img/Rectangle 1.png');
+}
+
