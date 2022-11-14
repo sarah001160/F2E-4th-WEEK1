@@ -11,6 +11,13 @@ $('document').ready(function(){
             }
         });
 
+        $('#AlienOne').each(function(){
+            let thisPos = $(this).offset().top;
+            if((scrollPos + windowHeight)>= thisPos){
+                $(this).addClass('animate')
+            }
+        })
+
        
 
     });

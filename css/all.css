@@ -6,6 +6,7 @@ html,body,*{
     font-size:20px;
     font-family:'微軟正黑體', 'Arial';
     
+    
 }
 .headerImg{
     max-width:90%;
@@ -41,7 +42,7 @@ html,body,*{
     0 0 10px,
     0 0 50px,
     0 0 50px;
-    letter-spacing:1.5rem;
+    letter-spacing:1rem;
 }
 
 
@@ -57,21 +58,26 @@ html,body,*{
 
 header{
     width:100%;
-    height:4000px;
+    height:120vh;
     box-sizing:border-box;
     background-color:#52556D;
     position:relative;
+    margin-bottom:100vh;
 }
 
 header div span{
     display:block;
     text-align:center;
     margin:0 auto;
-   /* text-shadow:white 0 0 0 ,
-                       0 0 10px,
-                       0 0 50px,
-                       0 0 50px;
-    letter-spacing:1.5rem;*/
+    animation-name:jump;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+}
+@keyframes jump{
+    0%{transform:translate(0,50%)}
+    50%{transform:translate(0,0)}
+    75%{transform:translate(0,0)}
+    100%{transform:translate(0,50%)}
 }
 
 header>div{
@@ -89,7 +95,18 @@ header .animateArea{
 header .animateArea .shadowHuman{
    margin-left:20%;
    margin-top:50px;
+   animation-name:walkRight;
+   animation-duration:5s;
+   animation-iteration-count: infinite;
 }
+@keyframes walkRight{
+    0%{transform:translateX(500%);opacity:1;}
+    50%{transform:translateX(1400%)}
+    75%{transform:translateY(-1400%)}
+    90%{transform:translateY(-1400%)}
+    100%{;opacity:0;}
+}
+
 header .animateArea .sparkOne{
     display:flex;
     margin:0 40% 0 22%;/*上下  左右*/
@@ -102,128 +119,36 @@ header .animateArea .flashLight{
     display:none;
 }
 
-.firstContent{
-    width:100%;
-    box-sizing:border-box;
-    padding:100px 0;/*上下 左右*/
-    margin-top:100vh;
-    margin-bottom:200vh;
-    display:flex;
-    flex-direction:row;
 
-}
-.firstContent div{
-  margin-left:10px;
-}
-.firstContent div img{
-   margin-top:200px; 
-}
-.firstContent div:nth-child(2){
-    margin-left:10%;
-}
-
-.secondContent{
-    display:flex;
-    box-sizing:border-box;
-    flex-direction:row-reverse;/*從右到左*/
-    margin-top:100vh;
-    margin-bottom:200vh;
-}
-
-.thirdContent{
-    box-sizing:border-box;
-}
-
-.thirdContent div{
-   display:flex;
-   justify-content:center;
-   margin-bottom:200vh;
-}
-.thirdContent div img{
-    width:25%;
-    height:25%;
-}
-
-.fourthContent{
-    box-sizing:border-box;
-    display:flex;
-    flex-direction:column-reverse;
-    justify-items:center;
-    margin-bottom:200vh;
-}
-
-.fourthContent div{
-    margin:100px auto 0 auto;
-}
-
-.fifthContent{
-    box-sizing:border-box;
-    display:flex;
-    flex-direction:row-reverse;
-    margin-bottom:200vh;
-}
-
-.sixthContent{
-    box-sizing:border-box;
-    display:flex;
-    flex-direction:row;
-    justify-content: center;
-    align-items: center;
-    height:100vh;
-}
-.sixthContent div{
-    margin-bottom:100vh;
-}
-.sixthContent div img{
-    width:264px;
-    height:162px;
-}
-
-.seventhContent{
-    width:100%;
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    box-sizing:border-box;
-}
-
-.seventhContent div img{
-   width:480px;
-   height:300px;
-}
-
-.eigthContent{
-    display:flex;
-    flex-direction:row;
-    justify-content: center;
-    align-items: center;
+.AliensContent{
+    position:relative;
     max-width:100%;
-    height:100vh;
-    position: relative;
-    margin-bottom:200vh;
-    box-sizing:border-box;
-    overflow:hidden;
 }
 
-.eigthContent div:nth-child(2){
+#AlienOne.animate{
     position:absolute;
     top:200px;
-    left:38%;
-    z-index:1000;
-    box-sizing:border-box;
+    left:0;
+    animation-name:moving;
+    animation-duration:1.5s;
+    animation-iteration-count:1;
+}
+@keyframes moving{
+    0%{
+        transform:scale(1)
+    }
+    100%{
+        transform:scale(5);
+        opacity:0;
+    }
 }
 
-.eigthContent div:nth-child(2) span{
-    font-size:40px;
-    letter-spacing:0.2rem;
+.AliensContent span{
+    position:absolute;
+    top:100px;
+    left:50%;
 }
 
-.outerSpace{
-    width:100%;
-    box-sizing:border-box;
-    height:auto;
-    background-image:url('../img/Rectangle 1.png');
-}
+
+
 
