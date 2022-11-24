@@ -48,7 +48,7 @@ html,body,*{
 
 
 
-
+/*----------------------------------------------*/
 
 
 #app{
@@ -58,14 +58,14 @@ html,body,*{
 
 header{
     width:100%;
-    height:120vh;
+    height:auto;
     box-sizing:border-box;
     background-color:#52556D;
     position:relative;
-    margin-bottom:100vh;
+    margin-bottom:100px;
 }
 
-header div span{
+header .slogan span{
     display:block;
     text-align:center;
     margin:0 auto;
@@ -98,31 +98,48 @@ header .animateArea .shadowHuman{
    animation-name:walkRight;
    animation-duration:5s;
    animation-iteration-count: infinite;
+   z-index:1000;
 }
 @keyframes walkRight{
     0%{transform:translateX(500%);opacity:1;}
     50%{transform:translateX(1400%)}
     75%{transform:translateY(-1400%)}
     90%{transform:translateY(-1400%)}
-    100%{;opacity:0;}
+    100%{opacity:0;}
 }
 
 header .animateArea .sparkOne{
     display:flex;
     margin:0 40% 0 22%;/*上下  左右*/
+    animation-name:goesUp;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
 }
+@keyframes goesUp{
+    0%{
+        opacity:1;
+        transform:translateY(0%);
+    }
+    75%{
+        transform:translateY(-10%);
+    }
+   
+}
+
 header .animateArea .flashLight{
     position:absolute;
     top:10%;
     left:38%;
     z-index:100;
-    display:none;
+
 }
 
 
-.AliensContent{
+.AliensContent>div{ /*AlinsContent的每第一層div都吃這個設定*/
     position:relative;
     max-width:100%;
+    height:100vh;
+   /* background:green;*/
 }
 
 #AlienOne.animate{
@@ -130,7 +147,7 @@ header .animateArea .flashLight{
     top:200px;
     left:0;
     animation-name:moving;
-    animation-duration:1.5s;
+    animation-duration:2s;
     animation-iteration-count:1;
 }
 @keyframes moving{
@@ -143,12 +160,108 @@ header .animateArea .flashLight{
     }
 }
 
-.AliensContent span{
+.AliensContent .sp1{
     position:absolute;
     top:100px;
     left:50%;
 }
 
 
+#AlienTwo.animate{
+    position:absolute;
+    top:200px;
+    right:0;
+    animation-name:flyInRtL;
+    animation-duration:3s;
+    animation-iteration-count:1;
+}
+@keyframes flyInRtL{
+    /*右到左滑入*/
+    0%{
+        position:absolute;
+        right:0;
+        transform:translateX(100%);
+        opacity:0;
+    }
+    50%{
+        transform:translateX(-100%);
+    }
+    100%{
+        position:absolute;
+        transform:translateX(0%);
+        opacity:1;
+        transform:scale(2);
+    }
+}
+
+.AliensContent .sp2{
+    position:absolute;
+    top:200px;
+    right:50%;
+}
+
+.AliensContent .sp3{
+    display:block;
+    position:absolute;
+    top:300px;
+    left:35%;
+    
+}
+
+.AliensContent #AlienThree{
+    position:absolute;
+    top:300px;
+    left:20%;
+    right:25%;
+    transform:scale(0.3);
+}
+
+#AlienThree.animate{
+    animation-name:growHuge;
+    animation-duration:2s;
+    animation-iteration-count:1;
+}
+@keyframes growHuge{
+    0%{
+        position:absolute;
+        top:700vh;
+    }
+    100%{
+        transform:scale(1.2);
+        position:absolute;
+        top:300px;
+    }
+}
+/*-----------------*/
 
 
+.spaceContent{
+    margin-top:100vh;
+    width:100%;
+    height:auto;
+   
+}
+.spaceContent .shipArea{
+    width:100%;
+    height:100vh;
+    background-image:url('.././img/spaceship 1.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position: center;
+    margin-bottom:200px;
+}
+
+.shipL{
+    transform:scale(2);
+}
+
+.shipR{
+    transform:scale(2);
+}
+
+.spaceNight{
+    width:100%;
+    height:100vh;
+    background:#50618F;
+    position:relative;/*for setting rocks*/
+}
