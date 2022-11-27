@@ -259,6 +259,12 @@ header .animateArea .sparkOne{
 
 
 @media(max-width:576px){
+    header .slogan span{
+        display:block;
+        letter-spacing:0;
+        font-size:50px;
+        
+    }
     #AlienOne.animate{
         width:150px;
         position:absolute;
@@ -326,22 +332,8 @@ header .animateArea .sparkOne{
         width:80%;
         transform:translateX(-10%);
     }
-    #AlienThree.animate{
-        animation-name:growHuge;
-        animation-duration:2s;
-        animation-iteration-count:1;
-    }
-    @keyframes growHuge{
-        0%{
-            position:absolute;
-            top:700vh;
-        }
-        100%{
-            transform:scale(0.5);
-            position:absolute;
-            top:200px;
-        }
-    }
+    
+    
 }
 
 /*-----------------*/
